@@ -1,0 +1,74 @@
+.teamGreeting {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.teamGreeting h1 {
+  margin-top: 130px;
+  margin-bottom: 20px;
+  font-size: 84px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.teamGreeting p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.teamMember {
+  visibility: hidden;
+  margin-top: 25vh;
+}
+
+.teamMemberHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  padding-bottom: 3vh;
+  border-bottom: 2px solid #333333;
+}
+
+@media (max-width: 1000px) {
+  .teamMemberHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.teamMemberHeader h3 {
+  font-size: 36px;
+}
+
+.teamMemberHeader img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.teamMemberHeader a {
+  color: black;
+  text-decoration: underline;
+}
+
+.teamMember p {
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  .teamMember p {
+    width: 80vw;
+  }
+}
+
+.emailSignUp {
+  margin-top: 25vh;
+}

@@ -1,0 +1,656 @@
+/*
+ * CSS Reset
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/*
+ * End CSS Reset
+ */
+
+/*
+Begin nav code
+*/
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100px;
+  color: #FFFFFF;
+  background-color: #333333;
+  -webkit-transition: top 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
+ }
+
+ @media (max-width: 500px) {
+   header {
+     height: 75px;
+   }
+ }
+
+ .navHidden {
+   top: -100px;
+ }
+
+ .navShown {
+   top: 0;
+ }
+
+ .desktopNav ul {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   list-style: none;
+   font-size: 24px;
+ }
+
+.desktopNav li {
+  height: 100%;
+  margin-top: 12px;
+  margin-right: 30px;
+  padding-bottom: 80px;
+  font-weight: bold;
+}
+
+.desktopNav li:first-child {
+  margin-left: auto;
+}
+
+.desktopUnderline {
+  border-bottom: 8px solid #FFFFFF;
+}
+/*
+Underline the page the user is currently on
+ */
+
+ .underline:hover {
+   text-decoration: none;
+ }
+
+ .navIcons {
+   position: absolute;
+   color: #FFFFFF;
+ }
+
+ .facebookNavIcon {
+   right: 137.13px;
+   margin-left: 100px;
+   color: #3B5998;
+ }
+
+ .twitterNavIcon {
+   right: 91.42px;
+   color: #00ACED;
+ }
+
+ .emailNavIcon {
+   right: 45.71px;
+ }
+
+ /*
+  Begin mobile nav code
+  */
+
+ .mobileNav {
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   width: 100%;
+   height: 100%;
+ }
+
+ .mobileNavButton {
+   font-size: 40px;
+   font-weight: bold;
+ }
+
+ @media (max-width: 550px) {
+   .mobileNav {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+   }
+
+   .desktopNav {
+     display: none;
+   }
+ }
+
+ @media (min-width: 551px) {
+   .desktopNav {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+   }
+
+   .mobileNav {
+     display: none;
+   }
+ }
+
+ @-webkit-keyframes slideIn {
+  from {
+    -webkit-transform: translateY(-100vh);
+              transform: translateY(-100vh);
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+              transform: translateY(0);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+  }
+}
+
+@-webkit-keyframes slideOut {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+
+  to {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+            display: none;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    -webkit-transform: translateY(0);
+              transform: translateY(0);
+  }
+
+  to {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+            display: none;
+  }
+}
+
+ .slideIn {
+           -webkit-animation-name: slideIn;
+                   animation-name: slideIn;
+   -webkit-animation-duration: 0.3s;
+           animation-duration: 0.3s;
+           -webkit-animation-timing-function: ease-out;
+           animation-timing-function: ease-out;
+           -webkit-animation-fill-mode: both;
+                   animation-fill-mode: both;
+ }
+
+.slideOut {
+  -webkit-animation-name: slideOut;
+          animation-name: slideOut;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+          -webkit-animation-timing-function: ease-in;
+                  animation-timing-function: ease-in;
+          -webkit-animation-fill-mode: both;
+                  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+          -webkit-animation-iteration-count: 1;
+                  animation-iteration-count: 1;
+          -webkit-animation-timing-function: ease-in;
+                  animation-timing-function: ease-in;
+          -webkit-animation-fill-mode: both;
+                  animation-fill-mode: both;
+}
+
+.mobileMenu {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  position: fixed;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #EEEEEE;
+  background-color: rgba(238, 238, 238, 0.5);
+}
+
+.mobileMenuVisible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mobileMenuXButton {
+  position: fixed;
+  top: 3vh;
+  right: 15vw;
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+ .mobileMenuList {
+   visibility: hidden;
+   margin-top: 10vh;
+   margin-right: 15vw;
+   color: #333333;
+   font-family: sans-serif;
+   list-style: none;
+   font-size: 32px;
+ }
+ /*
+ Set the visibility to hidden for the fadeIn animation to work
+  */
+
+ .mobileMenuList li {
+   margin-top: 3vh;
+ }
+
+ .mobileMenu a {
+   color: #333333;
+ }
+
+ .mobileUnderline {
+   border-bottom: 8px solid #333333;
+ }
+
+ .mobileMenuIcons {
+   visibility: hidden;
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   list-style: none;
+   font-size: 32px;
+ }
+
+.mobileMenuIcons li {
+ margin-right: 45px;
+ color: #333333;
+}
+
+.facebookMobileMenuIcon {
+  color: #3B5998;
+}
+
+.twitterMobileMenuIcon {
+  color: #00ACED;
+}
+
+.blur {
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
+}
+
+/*
+End mobile nav code
+*/
+
+/*
+End nav code
+*/
+
+.jumbotron {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: url("../img/home images/GoldenGateBridgeFull.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.jumbotron h1 {
+  margin-top: 130px;
+  color: #FFFFFF;
+  font-size: 72px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 450px) {
+  .jumbotron h1 {
+    margin-bottom: 0;
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 350px) {
+  .jumbotron h1 {
+    font-size: 54px;
+  }
+}
+
+.jumbotron p {
+  margin-left: 22vw;
+  margin-right: 22vw;
+  color: #FFFFFF;
+  font-size: 28px;
+  text-align: center;
+}
+
+@media (max-width: 550px) {
+  .jumbotron p {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .jumbotron p {
+    margin-top: 50px;
+    font-size: 22px;
+  }
+}
+
+.getStartedButton {
+  height: 75px;
+  width: 250px;
+  margin-bottom: 100px;
+  color: #FFFFFF;
+  font-size: 24px;
+  text-transform: uppercase;
+  background-color: #333333;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 350px) {
+  .getStartedButton {
+    height: 50px;
+    width: 170px;
+    font-size: 18px;
+  }
+}
+
+.getStartedButton:hover {
+  color: #333333;
+  background-color: #FFFFFF;
+}
+
+.getStartedButton:active, .homeColumns button:active, .emailInput button:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.homeColumns {
+  width: 100vw;
+  height: 80vh;
+  margin-top: 100px;
+}
+
+.homeColumns button {
+  height: 50px;
+  width: 200px;
+  color: #333333;
+  background-color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: thin solid #333333;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.homeColumns button:hover, .emailInput button:hover {
+  color: #FFFFFF;
+  background-color: #333333;
+}
+
+.homeColumns div {
+  visibility: hidden;
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .homeColumns div {
+     display: block;
+     width: 100vw;
+     margin-bottom: 75px;
+     padding: 20px;
+     width: 100vw;
+   }
+  /* Change the layout of the three homeColumns divs
+  so that they go from a horizontal row to vertical row */
+  .homeColumns div:last-child {
+    margin-bottom: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .homeColumns div {
+    width: 90vw;
+  }
+}
+
+.homeColumns svg {
+  height: 50px;
+}
+
+.homeColumns h2 {
+  font-weight: 600;
+  font-size: 38px;
+  text-transform: uppercase;
+}
+
+.homeColumns p {
+  font-weight: 400;
+  font-size: 20px;
+  padding: 0 50px;
+  margin-bottom: 40px;
+}
+
+.emailSignUp {
+  visibility: hidden;
+  margin-bottom: 15vh;
+}
+
+.emailSignUp i {
+  display: flex;
+  justify-content: center;
+  clear: both;
+  font-size: 72px;
+}
+
+.emailSignUp h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 0;
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.emailSignUp p {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 5vh;
+  font-size: 20px;
+}
+
+.emailInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .emailInput {
+    flex-direction: column;
+  }
+
+  .emailInput input {
+    margin-left: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.emailInput input {
+  height: 50px;
+  width: 200px;
+  margin-right: 25px;
+  border-width: 3px;
+  border-color: #333333;
+  border-style: solid;
+  text-align: center;
+  font-size: 16px;
+}
+
+.emailInput button {
+  height: 56px;
+  width: 220px;
+  color: #333333;
+  background-color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: thin solid #333333;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  min-height: 15vh;
+  color: #FFFFFF;
+  background-color: #333333;
+}
+
+footer p {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  footer p {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
+
+footer p a {
+  text-decoration: underline;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  list-style: none;
+  font-size: 32px;
+}
+
+footer li {
+  margin-right: 25px;
+}
+
+.facebookFooterIcon {
+  color: #3B5998;
+}
+
+.twitterFooterIcon {
+  color: #00ACED;
+}

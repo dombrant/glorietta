@@ -1,0 +1,34 @@
+{
+  "extends": "eslint:recommended",
+
+  "env": {
+    "browser": true,
+    "node": true
+  },
+
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+    "experimentalObjectRestSpread": true
+    }
+  },
+
+  "globals": {
+    "scrollIt": true,
+    "currentScrollTop": true,
+    "headerAnimation": true,
+    "didScroll": true,
+    "fadeInHomeCards": true,
+    "homeColumns": true,
+    "Siema": true,
+    "fadeInOnScroll": true,
+    "emailSignUp": true
+  },
+
+  "rules": {
+    "no-var": 2,
+    "no-console": 1,
+    "no-alert": 1,
+    "no-unused-vars": 0
+  }
+}

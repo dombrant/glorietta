@@ -1,0 +1,20 @@
+.siema {
+  margin-top: 15vh;
+}
+
+.siema img {
+  width: 100vw;
+  height: 100vh;
+}
+
+@media (max-width: 1000px) {
+  .siema img {
+    height: 50vh;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 2000px) {
+  .siema img {
+    height: 70vh;
+  }
+}

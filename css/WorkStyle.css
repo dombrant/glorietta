@@ -1,0 +1,71 @@
+.workGreeting {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.workGreeting h1 {
+  margin-top: 130px;
+  margin-bottom: 20px;
+  font-size: 84px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.workGreeting p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.showCase {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: 50vh;
+  margin-top: 5vh;
+}
+
+.showCase h1 {
+  font-size: 50px;
+}
+
+.showCase img {
+  width: 30vw;
+  height: 50vh;
+  box-shadow: 0 0 20px #000000;
+}
+
+@media (max-width: 1000px) {
+  .showCase img {
+    height: 30vh;
+  }
+}
+
+@media (max-width: 800px) {
+  .showCase img {
+    width: 50vw;
+  }
+}
+
+.showCase p {
+  width: 30vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-bottom: 5vh;
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 2px solid #333333;
+}
+
+@media (max-width: 800px) {
+  .showCase p {
+    width: 75vw;
+  }
+}
+
+.emailSignUp {
+  margin-top: 20vh;
+}
