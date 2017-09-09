@@ -1,3 +1,7 @@
+window.onload = function () {
+  document.querySelector(".jumbotron").classList.add("jumbotronImageBackground");
+}
+
 const homeColumns = document.querySelector(".homeColumns");
 const designColumn = document.querySelector(".designColumn");
 const developColumn = document.querySelector(".developColumn");
