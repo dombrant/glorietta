@@ -391,6 +391,10 @@ End nav code
   background-repeat: no-repeat;
 }
 
+.jumbotronImageBackground {
+  background-image: url("../img/home images/GoldenGateBridge.jpg");
+}
+
 .jumbotron h1 {
   margin-top: 130px;
   color: #FFFFFF;
