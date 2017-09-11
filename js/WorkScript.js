@@ -1,4 +1,3 @@
-const showCaseContainer = document.querySelector(".showCaseContainer");
 const showCase = document.getElementsByClassName("showCase");
 
 window.addEventListener("scroll", function() {
@@ -11,8 +10,16 @@ setInterval(function() {
   if (didScroll) {
     headerAnimation();
     fadeInOnScroll({
-      triggerElement: showCaseContainer,
-      fadeInElements: [showCase[0], showCase[1], showCase[2]]
+      triggerElement: showCase[0],
+      fadeInElements: [showCase[0]]
+    });
+    fadeInOnScroll({
+      triggerElement: showCase[1],
+      fadeInElements: [showCase[1]]
+    });
+    fadeInOnScroll({
+      triggerElement: showCase[2],
+      fadeInElements: [showCase[2]]
     });
     fadeInEmailSignUp();
     didScroll = false;
