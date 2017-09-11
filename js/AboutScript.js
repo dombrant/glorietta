@@ -1,5 +1,3 @@
-const mainParagraphs = document.querySelector(".mainParagraphs");
-
 window.addEventListener("scroll", function() {
   "use strict";
 
