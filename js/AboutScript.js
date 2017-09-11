@@ -9,10 +9,7 @@ window.addEventListener("scroll", function() {
 setInterval(function() {
   if (didScroll) {
     headerAnimation();
-    fadeInOnScroll({
-      triggerElement: mainParagraphs,
-      fadeInElements: [emailSignUp]
-    });
+    fadeInEmailSignUp();
     didScroll = false;
   }
 }, 200);

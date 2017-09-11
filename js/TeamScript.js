@@ -13,10 +13,7 @@ setInterval(function() {
       triggerElement: teamMemberArray[0],
       fadeInElements: teamMemberArray
     });
-    fadeInOnScroll({
-      triggerElement: emailSignUp,
-      fadeInElements: [emailSignUp]
-    });
+    fadeInEmailSignUp();
     didScroll = false;
   }
 }, 200);

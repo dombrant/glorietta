@@ -22,7 +22,8 @@
     "homeColumns": true,
     "Siema": true,
     "fadeInOnScroll": true,
-    "emailSignUp": true
+    "emailSignUp": true,
+    "fadeInEmailSignUp": true
   },
 
   "rules": {

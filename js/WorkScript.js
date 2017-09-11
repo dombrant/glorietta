@@ -12,8 +12,9 @@ setInterval(function() {
     headerAnimation();
     fadeInOnScroll({
       triggerElement: showCaseContainer,
-      fadeInElements: [showCase[0], showCase[1], showCase[2], emailSignUp]
+      fadeInElements: [showCase[0], showCase[1], showCase[2]]
     });
+    fadeInEmailSignUp();
     didScroll = false;
   }
 }, 200);

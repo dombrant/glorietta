@@ -2,7 +2,6 @@ window.onload = function () {
   document.querySelector(".jumbotron").classList.add("jumbotronImageBackground");
 }
 
-const homeColumns = document.querySelector(".homeColumns");
 const designColumn = document.querySelector(".designColumn");
 const developColumn = document.querySelector(".developColumn");
 const deployColumn = document.querySelector(".deployColumn");
@@ -17,9 +16,18 @@ setInterval(function() {
   if (didScroll) {
     headerAnimation();
     fadeInOnScroll({
-      triggerElement: homeColumns,
-      fadeInElements: [designColumn, developColumn, deployColumn, emailSignUp]
+      triggerElement: designColumn,
+      fadeInElements: [designColumn]
     });
+    fadeInOnScroll({
+      triggerElement: developColumn,
+      fadeInElements: [developColumn]
+    });
+    fadeInOnScroll({
+      triggerElement: deployColumn,
+      fadeInElements: [deployColumn]
+    });
+    fadeInEmailSignUp();
     didScroll = false;
   }
 }, 200);

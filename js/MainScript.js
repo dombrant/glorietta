@@ -160,5 +160,10 @@ document.querySelector(".mobileMenuXButton").addEventListener("click", hideMobil
  */
 
 const emailSignUp = document.querySelector(".emailSignUp");
-//Define the emailSignUp variable in the main script
-//Because it will be used in the scripts for each page
+
+function fadeInEmailSignUp() {
+  fadeInOnScroll({
+    triggerElement: emailSignUp,
+    fadeInElements: [emailSignUp]
+  });
+}
