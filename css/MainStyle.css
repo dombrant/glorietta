@@ -514,9 +514,6 @@ End nav code
    }
   /* Change the layout of the three homeColumns divs
   so that they go from a horizontal row to vertical row */
-  .homeColumns div:last-child {
-    margin-bottom: 200px;
-  }
 }
 
 @media (max-width: 500px) {
