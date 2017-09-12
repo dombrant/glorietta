@@ -35,6 +35,8 @@ setInterval(function() {
  Trigger headerAnimation and fadeInOnScroll when scrolling
  */
 
+const homeColumns = document.querySelector(".homeColumns");
+
 document.querySelector(".getStartedButton").addEventListener("click", function () {
   scrollIt(homeColumns);
 });
