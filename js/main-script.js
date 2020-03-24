@@ -9,9 +9,7 @@ let lastScrollTop = 0;
 let currentScrollTop = document.body.scrollTop;
 const delta = 100;
 
-function headerAnimation() {
-  "use strict";
-
+const headerAnimation = () => {
   currentScrollTop = document.body.scrollTop;
 
   if (Math.abs(lastScrollTop - currentScrollTop) <= delta) {
@@ -27,7 +25,7 @@ function headerAnimation() {
   }
 
   lastScrollTop = currentScrollTop;
-}
+};
 
 /*
  End header scroll code
@@ -49,9 +47,7 @@ const facebookMobileMenuIcon = document.querySelector(
 const twitterMobileMenuIcon = document.querySelector(".twitterMobileMenuIcon");
 const emailMobileMenuIcon = document.querySelector(".emailMobileMenuIcon");
 
-function showMobileMenu() {
-  "use strict";
-
+const showMobileMenu = () => {
   mobileMenu.style.display = "flex";
   mobileMenu.classList.remove("slideOut");
   mobileMenu.classList.add("slideIn");
@@ -59,27 +55,27 @@ function showMobileMenu() {
   container.classList.add("blur");
   document.querySelector("html").style.overflow = "hidden";
 
-  setTimeout(function() {
+  setTimeout(() => {
     mobileMenuItem1.classList.add("fadeIn");
     mobileMenuItem1.style.visibility = "visible";
   }, 100);
 
-  setTimeout(function() {
+  setTimeout(() => {
     mobileMenuItem2.classList.add("fadeIn");
     mobileMenuItem2.style.visibility = "visible";
   }, 300);
 
-  setTimeout(function() {
+  setTimeout(() => {
     mobileMenuItem3.classList.add("fadeIn");
     mobileMenuItem3.style.visibility = "visible";
   }, 500);
 
-  setTimeout(function() {
+  setTimeout(() => {
     mobileMenuItem4.classList.add("fadeIn");
     mobileMenuItem4.style.visibility = "visible";
   }, 700);
 
-  setTimeout(function() {
+  setTimeout(() => {
     facebookMobileMenuIcon.classList.add("fadeIn");
     facebookMobileMenuIcon.style.visibility = "visible";
     twitterMobileMenuIcon.classList.add("fadeIn");
@@ -88,7 +84,7 @@ function showMobileMenu() {
     emailMobileMenuIcon.style.visibility = "visible";
   }, 800);
 
-  document.ontouchstart = function(event) {
+  document.ontouchstart = event => {
     let currentTarget = event.target;
     if (currentTarget.classList.contains("mobileMenuXButton")) {
       return true;
@@ -106,21 +102,19 @@ function showMobileMenu() {
   };
   //Prevent the background from scrolling when the mobile menu is open
   //And when the user is on a touch screen device
-}
+};
 //Despite the fact that the slideIn animation sets the display to flex,
 //the display has to be set to flex here also
 //in order to avoid a bug where the menu's display value stays as none after the first time it is clicked
 
-function hideMobileMenu() {
-  "use strict";
-
+const hideMobileMenu = () => {
   mobileMenu.classList.remove("slideIn");
   mobileMenu.classList.add("slideOut");
   container.classList.remove("blur");
   document.querySelector("html").style.overflow = "visible";
   // There is no need to make the display value none here because that is done in the slideOut animation
 
-  setTimeout(function() {
+  setTimeout(() => {
     mobileMenuItem1.style.visibility = "hidden";
     mobileMenuItem2.style.visibility = "hidden";
     mobileMenuItem3.style.visibility = "hidden";
@@ -139,12 +133,10 @@ function hideMobileMenu() {
   // Change the visibility of each li item within mobileMenu back to hidden
   // So that when the slideIn animation is triggered again, the items will not be visible to start
 
-  document.ontouchstart = function() {
-    return true;
-  };
+  document.ontouchstart = () => true;
   //Remove the touchmove event listener that is meant to disable scrolling
   //On touch screen devices
-}
+};
 
 document
   .querySelector(".mobileNavButton")
@@ -160,9 +152,9 @@ document
 
 const emailSignUp = document.querySelector(".emailSignUp");
 
-function fadeInEmailSignUp() {
+const fadeInEmailSignUp = () => {
   fadeInOnScroll({
     triggerElement: emailSignUp,
     fadeInElements: [emailSignUp]
   });
-}
+};

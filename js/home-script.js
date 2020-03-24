@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = () => {
   document
     .querySelector(".jumbotron")
     .classList.add("jumbotronImageBackground");
@@ -8,13 +8,9 @@ const designColumn = document.querySelector(".designColumn");
 const developColumn = document.querySelector(".developColumn");
 const deployColumn = document.querySelector(".deployColumn");
 
-window.addEventListener("scroll", function() {
-  "use strict";
+window.addEventListener("scroll", () => (didScroll = true));
 
-  didScroll = true;
-});
-
-setInterval(function() {
+setInterval(() => {
   if (didScroll) {
     headerAnimation();
     fadeInOnScroll({
@@ -41,6 +37,4 @@ const homeColumns = document.querySelector(".homeColumns");
 
 document
   .querySelector(".getStartedButton")
-  .addEventListener("click", function() {
-    scrollIt(homeColumns);
-  });
+  .addEventListener("click", () => scrollIt(homeColumns));

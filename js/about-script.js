@@ -1,10 +1,6 @@
-window.addEventListener("scroll", function() {
-  "use strict";
+window.addEventListener("scroll", () => (didScroll = true));
 
-  didScroll = true;
-});
-
-setInterval(function() {
+setInterval(() => {
   if (didScroll) {
     headerAnimation();
     fadeInEmailSignUp();

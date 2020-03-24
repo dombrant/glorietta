@@ -47,7 +47,6 @@ header {
   height: 100px;
   color: #ffffff;
   background-color: #333333;
-  -webkit-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out;
 }
 
@@ -66,8 +65,6 @@ header {
 }
 
 .desktopNav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style: none;
   font-size: 24px;
@@ -121,11 +118,7 @@ Underline the page the user is currently on
   */
 
 .mobileNav {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -138,8 +131,6 @@ Underline the page the user is currently on
 
 @media (max-width: 550px) {
   .mobileNav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
@@ -150,8 +141,6 @@ Underline the page the user is currently on
 
 @media (min-width: 551px) {
   .desktopNav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
@@ -162,42 +151,32 @@ Underline the page the user is currently on
 
 @-webkit-keyframes slideIn {
   from {
-    -webkit-transform: translateY(-100vh);
     transform: translateY(-100vh);
   }
 
   to {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
 
 @keyframes slideIn {
   from {
-    -webkit-transform: translateY(-100vh);
     transform: translateY(-100vh);
   }
 
   to {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
 
 @-webkit-keyframes slideOut {
   from {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
   to {
-    -webkit-transform: translateY(-100vh);
     transform: translateY(-100vh);
     display: none;
   }
@@ -205,36 +184,26 @@ Underline the page the user is currently on
 
 @keyframes slideOut {
   from {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
   to {
-    -webkit-transform: translateY(-100vh);
     transform: translateY(-100vh);
     display: none;
   }
 }
 
 .slideIn {
-  -webkit-animation-name: slideIn;
   animation-name: slideIn;
-  -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
-  -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
 .slideOut {
-  -webkit-animation-name: slideOut;
   animation-name: slideOut;
-  -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
-  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
@@ -261,29 +230,17 @@ Underline the page the user is currently on
 }
 
 .fadeIn {
-  -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-  -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
-  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
 .mobileMenu {
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   position: fixed;
   z-index: 2;
@@ -296,8 +253,6 @@ Underline the page the user is currently on
 }
 
 .mobileMenuVisible {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -358,7 +313,6 @@ Underline the page the user is currently on
 }
 
 .blur {
-  -webkit-filter: blur(15px);
   filter: blur(15px);
 }
 
@@ -371,18 +325,9 @@ End nav code
 */
 
 .jumbotron {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   min-height: 100vh;
   width: 100vw;
@@ -450,7 +395,6 @@ End nav code
   font-size: 24px;
   text-transform: uppercase;
   background-color: #333333;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -470,9 +414,7 @@ End nav code
 .getStartedButton:active,
 .homeColumns button:active,
 .emailInput button:active {
-  -webkit-transform: scale(1.2);
   transform: scale(1.2);
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -491,7 +433,6 @@ End nav code
   font-size: 14px;
   text-transform: uppercase;
   border: thin solid #333333;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 

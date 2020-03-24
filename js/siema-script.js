@@ -4,6 +4,6 @@ const siema = new Siema({
   loop: true
 });
 
-setInterval(function() {
+setInterval(() => {
   siema.next();
 }, 5000);
