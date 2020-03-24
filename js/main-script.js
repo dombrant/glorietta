@@ -21,10 +21,9 @@ function headerAnimation() {
   if (currentScrollTop > lastScrollTop) {
     header.classList.remove("navShown");
     header.classList.add("navHidden");
-  }
-  else {
-      header.classList.remove("navHidden");
-      header.classList.add("navShown");
+  } else {
+    header.classList.remove("navHidden");
+    header.classList.add("navShown");
   }
 
   lastScrollTop = currentScrollTop;
@@ -44,10 +43,11 @@ const mobileMenuItem1 = document.querySelector(".mobileMenuItem1");
 const mobileMenuItem2 = document.querySelector(".mobileMenuItem2");
 const mobileMenuItem3 = document.querySelector(".mobileMenuItem3");
 const mobileMenuItem4 = document.querySelector(".mobileMenuItem4");
-const facebookMobileMenuIcon = document.querySelector(".facebookMobileMenuIcon");
+const facebookMobileMenuIcon = document.querySelector(
+  ".facebookMobileMenuIcon"
+);
 const twitterMobileMenuIcon = document.querySelector(".twitterMobileMenuIcon");
 const emailMobileMenuIcon = document.querySelector(".emailMobileMenuIcon");
-
 
 function showMobileMenu() {
   "use strict";
@@ -59,27 +59,27 @@ function showMobileMenu() {
   container.classList.add("blur");
   document.querySelector("html").style.overflow = "hidden";
 
-  setTimeout(function () {
+  setTimeout(function() {
     mobileMenuItem1.classList.add("fadeIn");
     mobileMenuItem1.style.visibility = "visible";
   }, 100);
 
-  setTimeout(function () {
+  setTimeout(function() {
     mobileMenuItem2.classList.add("fadeIn");
     mobileMenuItem2.style.visibility = "visible";
   }, 300);
 
-  setTimeout(function () {
+  setTimeout(function() {
     mobileMenuItem3.classList.add("fadeIn");
     mobileMenuItem3.style.visibility = "visible";
   }, 500);
 
-  setTimeout(function () {
+  setTimeout(function() {
     mobileMenuItem4.classList.add("fadeIn");
     mobileMenuItem4.style.visibility = "visible";
   }, 700);
 
-  setTimeout(function () {
+  setTimeout(function() {
     facebookMobileMenuIcon.classList.add("fadeIn");
     facebookMobileMenuIcon.style.visibility = "visible";
     twitterMobileMenuIcon.classList.add("fadeIn");
@@ -92,23 +92,18 @@ function showMobileMenu() {
     let currentTarget = event.target;
     if (currentTarget.classList.contains("mobileMenuXButton")) {
       return true;
-    }
-    else if (currentTarget.classList.contains("mobileMenuItem1")) {
+    } else if (currentTarget.classList.contains("mobileMenuItem1")) {
       return true;
-    }
-    else if (currentTarget.classList.contains("mobileMenuItem2")) {
+    } else if (currentTarget.classList.contains("mobileMenuItem2")) {
       return true;
-    }
-    else if (currentTarget.classList.contains("mobileMenuItem3")) {
+    } else if (currentTarget.classList.contains("mobileMenuItem3")) {
       return true;
-    }
-    else if (currentTarget.classList.contains("mobileMenuItem4")) {
+    } else if (currentTarget.classList.contains("mobileMenuItem4")) {
       return true;
-    }
-    else {
+    } else {
       event.preventDefault();
     }
-  }
+  };
   //Prevent the background from scrolling when the mobile menu is open
   //And when the user is on a touch screen device
 }
@@ -125,7 +120,7 @@ function hideMobileMenu() {
   document.querySelector("html").style.overflow = "visible";
   // There is no need to make the display value none here because that is done in the slideOut animation
 
-  setTimeout(function () {
+  setTimeout(function() {
     mobileMenuItem1.style.visibility = "hidden";
     mobileMenuItem2.style.visibility = "hidden";
     mobileMenuItem3.style.visibility = "hidden";
@@ -146,14 +141,18 @@ function hideMobileMenu() {
 
   document.ontouchstart = function() {
     return true;
-  }
+  };
   //Remove the touchmove event listener that is meant to disable scrolling
   //On touch screen devices
 }
 
-document.querySelector(".mobileNavButton").addEventListener("click", showMobileMenu);
+document
+  .querySelector(".mobileNavButton")
+  .addEventListener("click", showMobileMenu);
 
-document.querySelector(".mobileMenuXButton").addEventListener("click", hideMobileMenu);
+document
+  .querySelector(".mobileMenuXButton")
+  .addEventListener("click", hideMobileMenu);
 
 /*
  End mobile nav code

@@ -1,6 +1,8 @@
-window.onload = function () {
-  document.querySelector(".jumbotron").classList.add("jumbotronImageBackground");
-}
+window.onload = function() {
+  document
+    .querySelector(".jumbotron")
+    .classList.add("jumbotronImageBackground");
+};
 
 const designColumn = document.querySelector(".designColumn");
 const developColumn = document.querySelector(".developColumn");
@@ -37,6 +39,8 @@ setInterval(function() {
 
 const homeColumns = document.querySelector(".homeColumns");
 
-document.querySelector(".getStartedButton").addEventListener("click", function () {
-  scrollIt(homeColumns);
-});
+document
+  .querySelector(".getStartedButton")
+  .addEventListener("click", function() {
+    scrollIt(homeColumns);
+  });

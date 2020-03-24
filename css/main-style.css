@@ -2,7 +2,8 @@
  * CSS Reset
  */
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   border: 0;
@@ -44,33 +45,33 @@ header {
   z-index: 1;
   width: 100vw;
   height: 100px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #333333;
   -webkit-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out;
- }
+}
 
- @media (max-width: 500px) {
-   header {
-     height: 75px;
-   }
- }
+@media (max-width: 500px) {
+  header {
+    height: 75px;
+  }
+}
 
- .navHidden {
-   top: -100px;
- }
+.navHidden {
+  top: -100px;
+}
 
- .navShown {
-   top: 0;
- }
+.navShown {
+  top: 0;
+}
 
- .desktopNav ul {
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   list-style: none;
-   font-size: 24px;
- }
+.desktopNav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  font-size: 24px;
+}
 
 .desktopNav li {
   height: 100%;
@@ -85,156 +86,156 @@ header {
 }
 
 .desktopUnderline {
-  border-bottom: 8px solid #FFFFFF;
+  border-bottom: 8px solid #ffffff;
 }
 /*
 Underline the page the user is currently on
  */
 
- .underline:hover {
-   text-decoration: none;
- }
+.underline:hover {
+  text-decoration: none;
+}
 
- .navIcons {
-   position: absolute;
-   color: #FFFFFF;
- }
+.navIcons {
+  position: absolute;
+  color: #ffffff;
+}
 
- .facebookNavIcon {
-   right: 137.13px;
-   margin-left: 100px;
-   color: #3B5998;
- }
+.facebookNavIcon {
+  right: 137.13px;
+  margin-left: 100px;
+  color: #3b5998;
+}
 
- .twitterNavIcon {
-   right: 91.42px;
-   color: #00ACED;
- }
+.twitterNavIcon {
+  right: 91.42px;
+  color: #00aced;
+}
 
- .emailNavIcon {
-   right: 45.71px;
- }
+.emailNavIcon {
+  right: 45.71px;
+}
 
- /*
+/*
   Begin mobile nav code
   */
 
- .mobileNav {
-   -webkit-box-pack: center;
-       -ms-flex-pack: center;
-           justify-content: center;
-   -webkit-box-align: center;
-       -ms-flex-align: center;
-           align-items: center;
-   width: 100%;
-   height: 100%;
- }
+.mobileNav {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 
- .mobileNavButton {
-   font-size: 40px;
-   font-weight: bold;
- }
+.mobileNavButton {
+  font-size: 40px;
+  font-weight: bold;
+}
 
- @media (max-width: 550px) {
-   .mobileNav {
-     display: -webkit-box;
-     display: -ms-flexbox;
-     display: flex;
-   }
+@media (max-width: 550px) {
+  .mobileNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 
-   .desktopNav {
-     display: none;
-   }
- }
+  .desktopNav {
+    display: none;
+  }
+}
 
- @media (min-width: 551px) {
-   .desktopNav {
-     display: -webkit-box;
-     display: -ms-flexbox;
-     display: flex;
-   }
+@media (min-width: 551px) {
+  .desktopNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 
-   .mobileNav {
-     display: none;
-   }
- }
+  .mobileNav {
+    display: none;
+  }
+}
 
- @-webkit-keyframes slideIn {
+@-webkit-keyframes slideIn {
   from {
     -webkit-transform: translateY(-100vh);
-              transform: translateY(-100vh);
+    transform: translateY(-100vh);
   }
 
   to {
     -webkit-transform: translateY(0);
-              transform: translateY(0);
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+    transform: translateY(0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
 @keyframes slideIn {
   from {
     -webkit-transform: translateY(-100vh);
-            transform: translateY(-100vh);
+    transform: translateY(-100vh);
   }
 
   to {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+    transform: translateY(0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
 @-webkit-keyframes slideOut {
   from {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 
   to {
     -webkit-transform: translateY(-100vh);
-            transform: translateY(-100vh);
-            display: none;
+    transform: translateY(-100vh);
+    display: none;
   }
 }
 
 @keyframes slideOut {
   from {
     -webkit-transform: translateY(0);
-              transform: translateY(0);
+    transform: translateY(0);
   }
 
   to {
     -webkit-transform: translateY(-100vh);
-            transform: translateY(-100vh);
-            display: none;
+    transform: translateY(-100vh);
+    display: none;
   }
 }
 
- .slideIn {
-           -webkit-animation-name: slideIn;
-                   animation-name: slideIn;
-   -webkit-animation-duration: 0.3s;
-           animation-duration: 0.3s;
-           -webkit-animation-timing-function: ease-out;
-           animation-timing-function: ease-out;
-           -webkit-animation-fill-mode: both;
-                   animation-fill-mode: both;
- }
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 
 .slideOut {
   -webkit-animation-name: slideOut;
-          animation-name: slideOut;
+  animation-name: slideOut;
   -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-          -webkit-animation-timing-function: ease-in;
-                  animation-timing-function: ease-in;
-          -webkit-animation-fill-mode: both;
-                  animation-fill-mode: both;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @-webkit-keyframes fadeIn {
@@ -261,36 +262,36 @@ Underline the page the user is currently on
 
 .fadeIn {
   -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
+  animation-name: fadeIn;
   -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-          -webkit-animation-iteration-count: 1;
-                  animation-iteration-count: 1;
-          -webkit-animation-timing-function: ease-in;
-                  animation-timing-function: ease-in;
-          -webkit-animation-fill-mode: both;
-                  animation-fill-mode: both;
+  animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .mobileMenu {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-     -ms-flex-direction: column;
-         flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-     -ms-flex-pack: center;
-   justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-     -ms-flex-align: center;
-        align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: fixed;
   z-index: 2;
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   background-color: rgba(238, 238, 238, 0.5);
 }
 
@@ -309,56 +310,56 @@ Underline the page the user is currently on
   font-weight: bold;
 }
 
- .mobileMenuList {
-   visibility: hidden;
-   margin-top: 10vh;
-   margin-right: 15vw;
-   color: #333333;
-   font-family: sans-serif;
-   list-style: none;
-   font-size: 32px;
- }
- /*
+.mobileMenuList {
+  visibility: hidden;
+  margin-top: 10vh;
+  margin-right: 15vw;
+  color: #333333;
+  font-family: sans-serif;
+  list-style: none;
+  font-size: 32px;
+}
+/*
  Set the visibility to hidden for the fadeIn animation to work
   */
 
- .mobileMenuList li {
-   margin-top: 3vh;
- }
+.mobileMenuList li {
+  margin-top: 3vh;
+}
 
- .mobileMenu a {
-   color: #333333;
- }
+.mobileMenu a {
+  color: #333333;
+}
 
- .mobileUnderline {
-   border-bottom: 8px solid #333333;
- }
+.mobileUnderline {
+  border-bottom: 8px solid #333333;
+}
 
- .mobileMenuIcons {
-   visibility: hidden;
-   display: flex;
-   justify-content: center;
-   width: 100%;
-   list-style: none;
-   font-size: 32px;
- }
+.mobileMenuIcons {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  list-style: none;
+  font-size: 32px;
+}
 
 .mobileMenuIcons li {
- margin-right: 45px;
- color: #333333;
+  margin-right: 45px;
+  color: #333333;
 }
 
 .facebookMobileMenuIcon {
-  color: #3B5998;
+  color: #3b5998;
 }
 
 .twitterMobileMenuIcon {
-  color: #00ACED;
+  color: #00aced;
 }
 
 .blur {
   -webkit-filter: blur(15px);
-          filter: blur(15px);
+  filter: blur(15px);
 }
 
 /*
@@ -375,17 +376,17 @@ End nav code
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-height: 100vh;
   width: 100vw;
-  background: #107A87;
+  background: #107a87;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -397,7 +398,7 @@ End nav code
 
 .jumbotron h1 {
   margin-top: 130px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 72px;
   font-weight: 600;
   text-align: center;
@@ -421,7 +422,7 @@ End nav code
 .jumbotron p {
   margin-left: 22vw;
   margin-right: 22vw;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 28px;
   text-align: center;
   text-shadow: 3px 3px 10px black;
@@ -445,7 +446,7 @@ End nav code
   height: 75px;
   width: 250px;
   margin-bottom: 100px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 24px;
   text-transform: uppercase;
   background-color: #333333;
@@ -463,12 +464,14 @@ End nav code
 
 .getStartedButton:hover {
   color: #333333;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
-.getStartedButton:active, .homeColumns button:active, .emailInput button:active {
+.getStartedButton:active,
+.homeColumns button:active,
+.emailInput button:active {
   -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -483,7 +486,7 @@ End nav code
   height: 50px;
   width: 200px;
   color: #333333;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
@@ -492,8 +495,9 @@ End nav code
   transition: all 0.5s ease;
 }
 
-.homeColumns button:hover, .emailInput button:hover {
-  color: #FFFFFF;
+.homeColumns button:hover,
+.emailInput button:hover {
+  color: #ffffff;
   background-color: #333333;
 }
 
@@ -506,12 +510,12 @@ End nav code
 
 @media (max-width: 800px) {
   .homeColumns div {
-     display: block;
-     width: 100vw;
-     margin-bottom: 75px;
-     padding: 20px;
-     width: 100vw;
-   }
+    display: block;
+    width: 100vw;
+    margin-bottom: 75px;
+    padding: 20px;
+    width: 100vw;
+  }
   /* Change the layout of the three homeColumns divs
   so that they go from a horizontal row to vertical row */
 }
@@ -600,7 +604,7 @@ End nav code
   height: 56px;
   width: 220px;
   color: #333333;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
@@ -614,7 +618,7 @@ footer {
   flex-wrap: wrap;
   width: 100vw;
   min-height: 15vh;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #333333;
 }
 
@@ -650,9 +654,9 @@ footer li {
 }
 
 .facebookFooterIcon {
-  color: #3B5998;
+  color: #3b5998;
 }
 
 .twitterFooterIcon {
-  color: #00ACED;
+  color: #00aced;
 }
