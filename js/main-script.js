@@ -63,17 +63,17 @@ const showMobileMenu = () => {
   setTimeout(() => {
     mobileMenuItem2.classList.add("fadeIn");
     mobileMenuItem2.style.visibility = "visible";
-  }, 300);
+  }, 200);
 
   setTimeout(() => {
     mobileMenuItem3.classList.add("fadeIn");
     mobileMenuItem3.style.visibility = "visible";
-  }, 500);
+  }, 300);
 
   setTimeout(() => {
     mobileMenuItem4.classList.add("fadeIn");
     mobileMenuItem4.style.visibility = "visible";
-  }, 700);
+  }, 400);
 
   setTimeout(() => {
     facebookMobileMenuIcon.classList.add("fadeIn");
@@ -82,7 +82,7 @@ const showMobileMenu = () => {
     twitterMobileMenuIcon.style.visibility = "visible";
     emailMobileMenuIcon.classList.add("fadeIn");
     emailMobileMenuIcon.style.visibility = "visible";
-  }, 800);
+  }, 500);
 
   document.ontouchstart = event => {
     let currentTarget = event.target;
