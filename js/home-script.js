@@ -4,8 +4,13 @@ window.onload = () => {
     .classList.add("jumbotronImageBackground");
 };
 
-const homeColumns = document.querySelector(".homeColumns");
-
-document
-  .querySelector(".getStartedButton")
-  .addEventListener("click", () => scrollIt(homeColumns));
+document.querySelector(".getStartedButton").addEventListener("click", () =>
+  window.scrollTo({
+    top:
+      document.querySelector(".homeColumns").offsetTop -
+      document.querySelector("header").offsetHeight,
+    left: 0,
+    behavior: "smooth"
+  })
+);
+// Subtract the header's height so that it doesn't scroll too low

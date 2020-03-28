@@ -422,7 +422,6 @@ End nav code
   display: flex;
   justify-content: space-around;
   width: 100vw;
-  height: 80vh;
   margin-top: 100px;
 }
 
@@ -448,23 +447,30 @@ End nav code
   text-align: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
+  .homeColumns {
+    flex-direction: column;
+  }
+
   .homeColumns div {
+    margin-top: 100px;
+  }
+  /* .homeColumns div {
     display: block;
     width: 100vw;
     margin-bottom: 75px;
     padding: 20px;
     width: 100vw;
-  }
+  } */
   /* Change the layout of the three homeColumns divs
   so that they go from a horizontal row to vertical row */
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .homeColumns div {
     width: 90vw;
   }
-}
+} */
 
 .homeColumns svg {
   height: 50px;
@@ -481,6 +487,11 @@ End nav code
   font-size: 20px;
   padding: 0 50px;
   margin-bottom: 40px;
+}
+
+.emailSignUp {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .emailSignUp i {
