@@ -149,12 +149,3 @@ document
 /*
  End mobile nav code
  */
-
-const emailSignUp = document.querySelector(".emailSignUp");
-
-const fadeInEmailSignUp = () => {
-  fadeInOnScroll({
-    triggerElement: emailSignUp,
-    fadeInElements: [emailSignUp]
-  });
-};

@@ -419,6 +419,8 @@ End nav code
 }
 
 .homeColumns {
+  display: flex;
+  justify-content: space-around;
   width: 100vw;
   height: 80vh;
   margin-top: 100px;
@@ -443,9 +445,6 @@ End nav code
 }
 
 .homeColumns div {
-  visibility: hidden;
-  float: left;
-  width: 33%;
   text-align: center;
 }
 
@@ -482,12 +481,6 @@ End nav code
   font-size: 20px;
   padding: 0 50px;
   margin-bottom: 40px;
-}
-
-.emailSignUp {
-  visibility: hidden;
-  margin-top: -100px;
-  margin-bottom: 15vh;
 }
 
 .emailSignUp i {
